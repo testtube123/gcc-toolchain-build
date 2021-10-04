@@ -3,10 +3,11 @@
 ###################################################################
 #Script Name	:   build-gcc                                                                                           
 #Description	:   build gcc for the Motorola 68000 toolchain   
-#Date           :   samedi, 4 avril 2020                                                                          
+#Date           :   Monday, 4 October 2021                                                                          
 #Args           :   Welcome to the next level!                                                                                        
-#Author       	:   Jacques Belosoukinski (kentosama)                                                   
-#Email         	:   kentosama@genku.net                                          
+#Author       	:   Jacques Belosoukinski (kentosama)
+#Fork Author    :   TestTube123
+#Email         	:                                             
 ##################################################################
 
 VERSION="11.2.0"

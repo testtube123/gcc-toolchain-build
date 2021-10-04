@@ -40,11 +40,6 @@ if ! [ -d "${SRC_DIR}/${DIR}" ]; then
     else
         tar xzvf ${ARCHIVE} -C ${SRC_DIR}
 
-        # Apply patch for ubsan.c at 1474: 
-        # || xloc.file == '\0' || xloc.file[0] == '\xff' to
-        # || xloc.file[0] == '\0' || xloc.file[0] == '\xff'
-     #   patch -t ${SRC_DIR}/${DIR}/gcc/ubsan.c < ${ROOT_DIR}/patch/ubsan-fix-check-empty-string.patch
-
     fi
 fi
 

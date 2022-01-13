@@ -98,4 +98,4 @@ if [ ${BUILD_NEWLIB} == "yes" ]; then
     fi
 fi
 
-echo ($TARGET) "toolchain build was terminated"
+echo {$TARGET} "toolchain build was terminated"

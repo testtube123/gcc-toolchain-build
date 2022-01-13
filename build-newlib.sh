@@ -9,10 +9,9 @@
 #Email         	:   kentosama@genku.net                                          
 ###################################################################
 
-VERSION="3.3.0"
+VERSION="4.2.0.20211231"
 ARCHIVE="newlib-${VERSION}.tar.gz"
 URL="ftp://sourceware.org/pub/newlib/${ARCHIVE}"
-SHA512SUM="2f0c6666487520e1a0af0b6935431f85d2359e27ded0d01d02567d0d1c6479f2f0e6bbc60405e88e46b92c2a18780a01a60fc9281f7e311cfd40b8d5881d629c"
 DIR="newlib-${VERSION}"
 
 # Check if user is root
@@ -34,12 +33,8 @@ fi
 
 # Extract the newlib archive if is needed
 if ! [ -d "${SRC_DIR}/${DIR}" ]; then
-    if [ $(sha512sum ${ARCHIVE} | awk '{print $1}') != ${SHA512SUM} ]; then
-        echo "SHA512SUM verification of ${ARCHIVE} failed!"
-        exit
-    else
         tar -zxvf ${ARCHIVE} -C ${SRC_DIR}
-    fi
+    
 fi
 
 # Export

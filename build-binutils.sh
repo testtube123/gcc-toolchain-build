@@ -10,10 +10,9 @@
 #Email         	:                                             
 ###################################################################
 
-VERSION="2.37"
+VERSION="2.36.1"
 ARCHIVE="binutils-${VERSION}.tar.bz2"
 URL="https://ftp.gnu.org/gnu/binutils/${ARCHIVE}"
-SHA512SUM="b3f5184697f77e94c95d48f6879de214eb5e17aa6ef8e96f65530d157e515b1ae2f290e98453e4ff126462520fa0f63852b6e1c8fbb397ed2e41984336bc78c6"
 DIR="binutils-${VERSION}"
 
 # Check if user is root
@@ -34,12 +33,8 @@ fi
 
 # Extract binutils archive if is needed
 if ! [ -d "${SRC_DIR}/${DIR}" ]; then
-    if [ $(sha512sum ${ARCHIVE} | awk '{print $1}') != ${SHA512SUM} ]; then
-        echo "SHA512SUM verification of ${ARCHIVE} failed!"
-        exit
-    else
         tar jxvf ${ARCHIVE} -C ${SRC_DIR}
-    fi
+   
 fi
 
 cd ${BUILD_DIR}/${DIR}

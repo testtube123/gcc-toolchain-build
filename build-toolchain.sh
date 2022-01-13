@@ -12,9 +12,9 @@
 BUILD_BINUTILS="yes"
 BUILD_GCC_STAGE_1="yes"
 BUILD_GCC_STAGE_2="no"
-BUILD_NEWLIB="no"
-CPU="m68000"
-PREFIX="m68k-elf-"
+BUILD_NEWLIB="yes"
+CPU="7400"
+PREFIX="powerpc-elf-"
 
 # Check if user is root
 if [ ${EUID} == 0 ]; then
@@ -41,12 +41,12 @@ done
 
 # Export
 export ARCH=$(uname -m)
-export TARGET="m68k-elf"
+export TARGET="powerpc-elf"
 export BUILD_MACH="${ARCH}-pc-linux-gnu"
 export HOST_MACH="${ARCH}-pc-linux-gnu"
 export NUM_PROC=$(nproc)
 export PROGRAM_PREFIX=${PREFIX}
-export INSTALL_DIR="${PWD}/m68k-toolchain"
+export INSTALL_DIR="${PWD}/powerpc-toolchain"
 export DOWNLOAD_DIR="${PWD}/download"
 export ROOT_DIR="${PWD}"
 export BUILD_DIR="${ROOT_DIR}/build"
@@ -97,4 +97,4 @@ if [ ${BUILD_NEWLIB} == "yes" ]; then
     fi
 fi
 
-echo "m68k toolchain build was terminated"
+echo "powerpc toolchain build was terminated"

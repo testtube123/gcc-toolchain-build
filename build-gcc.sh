@@ -10,10 +10,9 @@
 #Email         	:                                             
 ##################################################################
 
-VERSION="11.2.0"
+VERSION="11.1.0"
 ARCHIVE="gcc-${VERSION}.tar.gz"
 URL="https://gcc.gnu.org/pub/gcc/releases/gcc-${VERSION}/${ARCHIVE}"
-SHA512SUM="78318318bc2f19dfa9e0e23ffd132758b11785422761eeb7f5c2988cdd0560860d4580142496faa211ba80414bae9b7f3bc55ea968bdd5c1f713d4c5266e2fa3"
 DIR="gcc-${VERSION}"
 
 # Check if user is root
@@ -34,13 +33,9 @@ fi
 
 # Extract gcc archive if is needed
 if ! [ -d "${SRC_DIR}/${DIR}" ]; then
-    if [ $(sha512sum ${ARCHIVE} | awk '{print $1}') != ${SHA512SUM} ]; then
-        echo "SHA512SUM verification of ${ARCHIVE} failed!"
-        exit
-    else
-        tar xzvf ${ARCHIVE} -C ${SRC_DIR}
+    tar xzvf ${ARCHIVE} -C ${SRC_DIR}
 
-    fi
+    
 fi
 
 cd ${SRC_DIR}/${DIR}

@@ -1,7 +1,6 @@
-# GCC toolchain for the Motorola 68000
+# GCC toolchain Builder
 
-This is a set of bash scripts for build gcc toolchain on unix environment for the Motorola 68000 family (m68k) was mainly used in **SEGA Mega Drive**, **SEGA Mega CD**, **SNK NeoGeo**, **Atari ST**, **Amiga** and older computers.
-
+This is a set of bash scripts for build gcc toolchain on a unix environment 
 ## Build the toolchain
 
 First, you need to install devel environment was come with your Linux distro for build the toolchain. 
@@ -35,8 +34,8 @@ After, going into your workspace where you want build the toolchain (for example
 
 ```bash
 cd ~/workspace/source
-git clone https://github.com/kentosama/m68k-elf-gcc.git
-cd m68k-elf-gcc
+git clone https://github.com/testtube123/gcc-toolchain-build.git
+cd *-elf-gcc
 ```
 Now, you can run **build-toolchain.sh** for start the build. The process should take approximately 15 min or several hours depending on your computer. **Please, don't run this script as root!**
 
@@ -50,53 +49,53 @@ For build the toolchain with the newlib, use `--with-newlib` argument:
 $ ./build-toolchain.sh --with-newlib /* Have Not Tested */
 ```
 
-For build the toolchain with other processors of the Motrola 68000 family, use `--with-cpu` argument:
+For build the toolchain with other processors use `--with-cpu` argument:
 
 ```bash
-$ ./build-toolchain.sh --with-cpu=68000,68030...
+$ ./build-toolchain.sh --with-cpu=...
 ```
 
 For change the program prefix, use `--program-prefix` argument:
 
 ```bash
-$ ./build-toolchain.sh --program-prefix=sega-genesis-
+$ ./build-toolchain.sh --program-prefix=*-
 ```
 
 ## Install
 
-Once the Motorola 68000 toolchain was successful built, you can process to the installation. Move or copy the "m68k-toolchain" folder in "/opt" or "/usr/local":
+Once the toolchain was successful built, you can process to the installation. Move or copy the "*-toolchain" folder in "/opt" or "/usr/local":
 
 ```bash
-$ sudo cp -R m68k-toolchain /opt
+$ sudo cp -R *-toolchain /opt
 ```
 
-If you want, add the Motorola 68000 toolchain to your path environment:
+If you want, add the toolchain to your path environment:
 
 ```bash
-$ echo export PATH="${PATH}:/opt/m68k-toolchain/bin" >> ~/.bashrc
+$ echo export PATH="${PATH}:/opt/*-toolchain/bin" >> ~/.bashrc
 $ source ~/.bash_profile
 ```
 
-Finally, check that m68k-elf-gcc is working properly:
+Finally, check that *-elf-gcc is working properly:
 
 ```bash
-$ m68k-elf-gcc -v
+$ *-elf-gcc -v
 ```
 
 The result should display something like this:
 
 ```bash
 Using built-in specs.
-COLLECT_GCC=./m68k-elf-gcc
-COLLECT_LTO_WRAPPER=/home/kentosama/Workspace/m68-elf-gcc/m68k-toolchain/libexec/gcc/m68k-elf/11.2.0/lto-wrapper
-Target: m68k-elf
-Configured with: ../../source/gcc-11.2.0/configure --prefix=/home/kentosama/Workspace/m68-elf-gcc/m68k-toolchain --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --target=m68k-elf --program-prefix=m68k-elf- --enable-languages=c --enable-obsolete --enable-lto --disable-threads --disable-libmudflap --disable-libgomp --disable-nls --disable-werror --disable-libssp --disable-shared --disable-multilib --disable-libgcj --disable-libstdcxx --disable-gcov --without-headers --without-included-gettext --with-cpu=m68000
+COLLECT_GCC=./*-elf-gcc
+COLLECT_LTO_WRAPPER=/home/kentosama/Workspace/*-elf-gcc/*-toolchain/libexec/gcc/*-elf/11.1.0/lto-wrapper
+Target: *-elf
+Configured with: ../../source/gcc-11.1.0/configure --prefix=/home/example/Workspace/*-elf-gcc/*-toolchain --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --target=*-elf --program-prefix=*-elf- --enable-languages=c --enable-obsolete --enable-lto --disable-threads --disable-libmudflap --disable-libgomp --disable-nls --disable-werror --disable-libssp --disable-shared --disable-multilib --disable-libgcj --disable-libstdcxx --disable-gcov --without-headers --without-included-gettext --with-cpu=*
 Thread model: single
-gcc version 11.2.0 (GCC) 
+gcc version 11.1.0 (GCC) 
 ```
 
-For backup, you can store the Motorola 68000 toolchain in external drive:
+For backup, you can store the toolchain in external drive:
 ```bash
-$ tar -Jcvf sh2-gcc-11.2.0-toolchain.tar.xz m68k-toolchain
-$ mv m68k-gcc-11.2.0-toolchain.tar.xz /storage/toolchains/
+$ tar -Jcvf sh2-gcc-11.1.0-toolchain.tar.xz *-toolchain
+$ mv *-gcc-11.1.0-toolchain.tar.xz /storage/toolchains/
 ```

@@ -12,7 +12,7 @@
 
 BUILD_BINUTILS="yes"
 BUILD_GCC_STAGE_1="yes"
-BUILD_GCC_STAGE_2="no"
+BUILD_GCC_STAGE_2="yes"
 BUILD_NEWLIB="yes"
 CPU="7400"
 PREFIX="powerpc-elf-"

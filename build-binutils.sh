@@ -2,8 +2,8 @@
 
 ###################################################################
 #Script Name	:   build-binutils                                                                                            
-#Description	:   build binutils for the Motorola 68000 toolchain   
-#Date           :   Monday, 4 October 2021                                                                          
+#Description	:   build binutils for the toolchain   
+#Date           :   Wednesday, 12 January 2022                                                                          
 #Args           :   Welcome to the next level!                                                                                        
 #Author       	:   Jacques Belosoukinski (kentosama)                                                   
 #Fork Author    :   TestTube123

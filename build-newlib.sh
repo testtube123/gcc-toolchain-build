@@ -2,11 +2,12 @@
 
 ###################################################################
 #Script Name	:   build-newlib                                                                                            
-#Description	:   build newlib for the Motorola 68000 toolchain   
-#Date           :   samedi, 7 avril 2020                                                                          
+#Description	:   build newlib for the toolchain   
+#Date           :   Wednesday, 12 January 2022                                                                         
 #Args           :   Welcome to the next level!                                                                                        
 #Author       	:   Jacques Belosoukinski (kentosama)                                                   
-#Email         	:   kentosama@genku.net                                          
+#Fork Author    :   TestTube123
+#Email         	:                                             
 ###################################################################
 
 VERSION="4.2.0.20211231"

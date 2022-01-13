@@ -2,11 +2,12 @@
 
 ###################################################################
 #Script Name	:   build-toolchain                                                                                            
-#Description	:   build toolchain for the Motorola 68000   
-#Date           :   samedi, 4 avril 2020                                                                          
+#Description	:   build the toolchain
+#Date           :   Wednesday, 12 January 2022                                                                         
 #Args           :   Welcome to the next level!                                                                                        
 #Author       	:   Jacques Belosoukinski (kentosama)                                                   
-#Email         	:   kentosama@genku.net                                          
+#Email         	:                                      
+#Fork Author    :   TestTube123
 ###################################################################
 
 BUILD_BINUTILS="yes"

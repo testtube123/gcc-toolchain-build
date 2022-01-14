@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rvf sources/
+rm -rvf source/
 rm -rvf download/
 rm -rvf build/
 if [[ -f "*toolchain/"  ]]

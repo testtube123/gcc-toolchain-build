@@ -57,9 +57,6 @@ cd ${BUILD_DIR}/${DIR}
                                 --target=${TARGET} \
                                 --program-prefix=${PREFIX} \
                                 --disable-newlib-multithread \
-                                --disable-newlib-io-float \
-                                --enable-lite-exit \
-                                --disable-newlib-supplied-syscalls \
 
 # Build and install newlib
 make -j${NUM_PROC} 2<&1 | tee build.log
